@@ -1,0 +1,27 @@
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+     
+    <body>
+    <div id="container">
+    <form method="post" id="flogin" [formGroup]="loginuser" (ngSubmit)="loginUser(loginuser.value)">
+     
+    <div class="border-box">
+    <h2 style="color: aliceblue; margin:10px 0px 0px 90px;">Login Form</h2><br>
+    <label for="email" id="un" >Email:</label>
+    <input type="text" placeholder="Enter Email" id="email" formControlName="email"><br/>
+     
+    <label for="upass" id="ps">Password:</label>
+    <input type="password" placeholder="Enter Password" id="upass" formControlName="password"><br/>
+     
+    <button type="submit" value="Login"  id="submit">Login</button><br><br>
+     
+    <a style=" margin:10px 0px 0px 90px;" routerLink="/register">New Member</a><br>
+    <a style=" margin:10px 0px 0px 90px;" routerLink="/forgotpassword">Forgot Password</a><br>
+    </div>
+     
+    </form>
+    </div>
+     
+    </body><br><br><br>

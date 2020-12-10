@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login and Registration form example</title>
+
+</head>
+ 
+<body>
+ 
+<form method="post">
+<h2 style="color: aliceblue;text-align:center;">Buy Insurance</h2>
+ <div style="background-color: aliceblue;">
+<input type="radio" id="fourwheeler" formControlName="fourwheeler" name="vehicle" value="fourwheeler">
+<label for="fourwheeler">Four Wheeler</label><br>
+<input type="radio" id="twowheeler" formControlName="twowheeler" name="vehicle" value="twowheeler">
+<label for="twowheeler">Two Wheeler</label><br>
+<!--<input type="radio" formControlName="fourwheeler" id="radioo" value="fourwheeler"> Four Wheeler<br>
+<input type="radio" formControlName="twowheeler" id="radio" value="twowheeler"> Two Wheeler<br>-->
+</div>
+<label for="r1" id="manu">Enter car/ bike manufacturer:</label>
+<input type="text" formControlName="manu" id="manu"><br/>
+ 
+<label  for="r2" id="vehiclemodel">Enter Car/ Bike model: </label>
+<input type="text" formControlName="vehiclemodel" id="vehiclemodel"><br/>
+
+<label  for="r3" id="license">Enter Driving License</label>
+<input type="text" formControlName="license" id="license"><br/>
+ 
+<label  for="r4" id="purchasedate">Enter Purchase Date:</label>
+<input  type="date" formControlName="purchasedate" id="purchasedate" ><br/>
+
+<label  for="r5" id="regnum">Enter Registration Number:</label>
+<input type="text" formControlName="regnum" id="regnum"><br/>
+
+<label  for="r6" id="engnumber">Enter Engine Number</label>
+<input type="text" formControlName="engnumber" id="engnumber"><br/>
+
+<label  for="r6" id="chassnumber">Enter Chasses Number</label>
+<input type="text" formControlName="chassnumber" id="chassnumber"><br/>
+ 
+<button type="submit" value="Submit" id="button">Submit</button><br><br>
+
+<a style=" margin:10px 0px 0px 205px;" routerLink="">Back Home</a><br>
+ 
+</form>
+ 
+<script type="text/javascript">
+function save(){
+var user = document.getElementById("user").value;
+var pwd = document.getElementById("pwd").value;
+alert("username"+user+"password"+pwd);
+}
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login and Registration form example</title>
+
+</head>
+ 
+<body>
+ 
+<form method="post">
+<h2 style="color: aliceblue;text-align:center;">Premium Calculation</h2>
+<div style="color: aliceblue;">  
+    <input type="radio" id="fourwheeler" formControlName="fourwheeler" name="reason" value="fourwheeler">
+    <label for="fourwheeler">Four Wheeler</label>
+    <input type="radio" id="twowheeler" formControlName="twowheeler" name="reason" value="twowheeler">
+    <label for="twowheeler">Two Wheeler</label><br>
+    </div><br>
+
+ 
+<!--<button type="submit" value="Submit" id="button">Submit</button><br><br>-->
+
+<a routerLink="">Back Home</a><br>
+ 
+</form>
+ 
+<script type="text/javascript">
+function save(){
+var user = document.getElementById("user").value;
+var pwd = document.getElementById("pwd").value;
+alert("username"+user+"password"+pwd);
+}
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login and Registration form example</title>
+
+</head>
+ 
+<body>
+ 
+<form method="post">
+<h2 style="color: aliceblue;text-align:center;">Renew Insurance</h2>
+
+<label for="r1" id="policy">Enter Policy Number: </label>
+<input type="text" formControlName="policy" id="policy"><br/> <!--formcontrol same hoga ki alag idk-->
+ 
+<label  for="r2" id="mno">Enter Mobile Number: </label>
+<input type="number"  maxlength=10  minlength="10" formControlName="mobile" id="mno"><br/>
+
+<label  for="r3" id="email">Email</label>
+<input type="email" formControlName="email" id="email"><br/>
+ 
+<button type="submit" value="Submit" id="button">Submit</button><br><br>
+
+<a style=" margin:10px 0px 0px 205px;" routerLink="">Back Home</a><br>
+ 
+</form>
+ 
+<script type="text/javascript">
+function save(){
+var user = document.getElementById("user").value;
+var pwd = document.getElementById("pwd").value;
+alert("username"+user+"password"+pwd);
+}
+</script>
+ 
+</body>
+</html>

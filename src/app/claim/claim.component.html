@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login and Registration form example</title>
+
+</head>
+ 
+<body>
+ 
+<form method="post">
+<h2 style="color: aliceblue;text-align:center;">Claim Insurance</h2>
+ 
+<label for="r1" id="policynum">Enter Policy Number</label>
+<input type="text" formControlName="policynum" id="policynum"><br/>
+ 
+<label  for="r2" id="mno">Enter Mobile Number</label>
+<input type="text" formControlName="mobile" id="mno"><br/>
+
+<div style="background-color: aliceblue;">
+    <input type="radio" id="natural" formControlName="natural" name="reason" value="natural">
+    <label for="natural">Natural Disaster</label><br>
+    <input type="radio" id="manmade" formControlName="manmade" name="reason" value="manmade">
+    <label for="manmade">Man-Made Disaster</label><br>
+    <input type="radio" id="road" formControlName="road" name="reason" value="road">
+    <label for="road">Road Accidents</label><br>
+    <input type="radio" id="theft" formControlName="theft" name="reason" value="theft">
+    <label for="theft">Theft</label><br>
+    
+    </div>
+
+ 
+<button type="submit" value="Submit" id="button">Submit</button><br><br>
+
+<a style=" margin:10px 0px 0px 205px;" routerLink="">Back Home</a><br>
+ 
+</form>
+ 
+<script type="text/javascript">
+function save(){
+var user = document.getElementById("user").value;
+var pwd = document.getElementById("pwd").value;
+alert("username"+user+"password"+pwd);
+}
+</script>
+ 
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login and Registration form example</title>
-
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
  
 <body>
@@ -16,22 +16,34 @@
     <button type="button" (click)="ShowDiv('A')">Four Wheeler</button><br><br>
     <button type="button" (click)="ShowDiv('B')">Two Wheeler</button><br><br>
     <div style="color: aliceblue; padding: 50px 10px 10px 10px;" *ngIf="currDiv == 'A'">
-        <form method="post">
+        <form method="post" >
 
             <div class="border-box">
             <label for="carmodel" id="un" >Car Model:</label>
             <input type="text" placeholder="Enter Car Model" id="carmodel" formControlName="carmodel"><br/>
              
-            <label style="margin: 10px 0px 0px 40px;"    for="age" id="ps">Age:</label>
-            <input type="text" placeholder="Enter Age" id="age" formControlName="age"><br/><br>
+            <label style="margin: 10px 0px 0px 40px;" for="age" id="ps">Age:</label>
+            <input type="number"  ng-model="b"  placeholder="Enter Age" id="age" formControlName="age"><br>
+          
+            <br/><br>
              
-            <button style="color:aliceblue;" type="submit" value="submit"  id="submit">Submit</button><br><br>
+            <button style="color:aliceblue;" type="submit" value="submit" ng-click="addFunc()" id="submit">Submit</button><br><br>
+            <div> <p style="color: aliceblue;">hi</p></div> 
             </div>
              
             </form>
 
     </div>
-
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.sum = 0;
+            $scope.addFunc = function() {
+                $scope.sum=$scope.b; 
+                return $scope.sum;
+            }
+        });
+        </script>
 
     
     <div style="color: aliceblue; padding: 50px 10px 10px 10px;" *ngIf="currDiv == 'B'">
@@ -41,7 +53,7 @@
             <input type="text" placeholder="Enter Bike Model" id="bikemodel" formControlName="bikemodel"><br/>
              
             <label style="margin: 10px 0px 0px 40px;" for="age" id="ps">Age:</label>
-            <input type="text" placeholder="Enter Age" id="age" formControlName="age"><br/><br>
+            <input type="text" placeholder="Enter Age" id="age" formControlName="age"><br/>
              
             <button style="color:aliceblue;" type="submit" value="submit"  id="submit">Submit</button><br><br>
             </div>

@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estimate.component.css']
 })
 export class EstimateComponent implements OnInit {
+  currDiv: string = '';
 
+  ShowDiv(divVal: string) {
+    this.currDiv = divVal;
+  }
   constructor() { }
 
   ngOnInit(): void {

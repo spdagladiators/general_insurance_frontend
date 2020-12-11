@@ -10,11 +10,46 @@
  
 <form method="post">
 <h2 style="color: aliceblue;text-align:center;">Premium Calculation</h2>
-<div style="color: aliceblue;">  
-    <input type="radio" id="fourwheeler" formControlName="fourwheeler" name="reason" value="fourwheeler">
-    <label for="fourwheeler">Four Wheeler</label>
-    <input type="radio" id="twowheeler" formControlName="twowheeler" name="reason" value="twowheeler">
-    <label for="twowheeler">Two Wheeler</label><br>
+<br/>
+
+<div id="container">
+    <button type="button" (click)="ShowDiv('A')">Four Wheeler</button><br><br>
+    <button type="button" (click)="ShowDiv('B')">Two Wheeler</button><br><br>
+    <div style="color: aliceblue; padding: 50px 10px 10px 10px;" *ngIf="currDiv == 'A'">
+        <form method="post">
+
+            <div class="border-box">
+            <label for="carmodel" id="un" >Car Model:</label>
+            <input type="text" placeholder="Enter Car Model" id="carmodel" formControlName="carmodel"><br/>
+             
+            <label style="margin: 10px 0px 0px 40px;"    for="age" id="ps">Age:</label>
+            <input type="text" placeholder="Enter Age" id="age" formControlName="age"><br/><br>
+             
+            <button style="color:aliceblue;" type="submit" value="submit"  id="submit">Submit</button><br><br>
+            </div>
+             
+            </form>
+
+    </div>
+
+
+    
+    <div style="color: aliceblue; padding: 50px 10px 10px 10px;" *ngIf="currDiv == 'B'">
+        <form method="post">
+            <div class="border-box">
+            <label for="bikemodel" id="un" >Bike Model:</label>
+            <input type="text" placeholder="Enter Bike Model" id="bikemodel" formControlName="bikemodel"><br/>
+             
+            <label style="margin: 10px 0px 0px 40px;" for="age" id="ps">Age:</label>
+            <input type="text" placeholder="Enter Age" id="age" formControlName="age"><br/><br>
+             
+            <button style="color:aliceblue;" type="submit" value="submit"  id="submit">Submit</button><br><br>
+            </div>
+             
+            </form>
+    
+
+    </div><br>
     </div><br>
 
  
@@ -24,13 +59,7 @@
  
 </form>
  
-<script type="text/javascript">
-function save(){
-var user = document.getElementById("user").value;
-var pwd = document.getElementById("pwd").value;
-alert("username"+user+"password"+pwd);
-}
-</script>
+
  
 </body>
 </html>
